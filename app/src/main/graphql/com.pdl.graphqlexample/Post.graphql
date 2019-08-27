@@ -1,0 +1,20 @@
+query AllPostQuery{
+    allPosts{
+        title
+        description
+    }
+}
+
+mutation CreatePost(
+    $title : String!
+    $description : String!
+){
+    createPost(
+        title: $title
+        description: $description
+    ){
+        id
+    }
+}
+
+
